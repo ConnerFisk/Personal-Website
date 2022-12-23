@@ -75,6 +75,31 @@ t2.fromTo('nav', {y: "-100%"}, {y: "0%"})
 //Make the title fade in at start.
 t1.fromTo(".title", {opacity: 0}, {opacity: 1})
 
+//Mouse Animation Color
+//Create a boolean to keep track of if the mouse is down or not
+let mouseDown = false
+//Have a rgb array for changed the color
+let rgb = []
+window.addEventListener("mousedown", () => (mouseDown = true))
+window.addEventListener("mouseup", () => (mouseDown = false))
 
+window.addEventListener('mousemove', (e) => {
+  //If the mouse is down, then create a new RGB value with relation to
+  //its X and Y corrdinate on the page.
+  if(mouseDown){
+    rgb = [
+      Math.round((e.pageX / sizes.width) * 255),
+      Math.round((e.pageY / sizes.height) * 255),
+      150,
+    ]
+    //Update the color so that the planet changed when spun.
+    let newColor = new THREE.Color(`rgb(${rgb.join(",")})`)
+    gsap.to(mesh.material.color, {
+      r: newColor.r,
+      g: newColor.g,
+      b: newColor.b,
+    })
+  }
+})
 
 
