@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import "./style.css"
+import gsap from "gsap"
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
 
 //Scene
@@ -20,8 +21,8 @@ const sizes = {
 }
 
 //Light
-const light = new THREE.PointLight(0xffffff, 1, 100)
-light.position.set(0, 10, 10)
+const light = new THREE.PointLight(0xffffff, 2, 100)
+light.position.set(10, 10, 10)
 scene.add(light)
 
 //Camera
@@ -63,3 +64,17 @@ const loop = () => {
   window.requestAnimationFrame(loop)
 }
 loop()
+
+//Timeline
+const t1 = gsap.timeline({ defaults: {duration: 1 }})
+const t2 = gsap.timeline({ defaults: {duration: .5 }})
+//Make the planet zoom into view at start.
+t1.fromTo(mesh.scale, {z:0, x:0, y:0}, {z: 1, x: 1, y: 1})
+//Make the nav fall in to place at start.
+t2.fromTo('nav', {y: "-100%"}, {y: "0%"})
+//Make the title fade in at start.
+t1.fromTo(".title", {opacity: 0}, {opacity: 1})
+
+
+
+
