@@ -48,3 +48,14 @@ nav ul {
   top: 75%;
   transform: translate(-50%, -75%)
 }
+
+.about{
+  color: white;
+  z-index: 2;
+  position: absolute;
+  font-weight:bold;
+  font-size: 3rem;
+  left: 20%;
+  top: 100%;
+  transform: translate(-50%, -75%)
+}

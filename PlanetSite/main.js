@@ -7,9 +7,12 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
 const scene = new THREE.Scene()
 
 //Create our planet
-const geometry = new THREE.DodecahedronGeometry(3, 1)
-const material = new THREE.MeshStandardMaterial({
-  color: "#ff634e",
+const geometry = new THREE.IcosahedronGeometry(3, 1)
+// const material = new THREE.MeshStandardMaterial({
+//   color: "#ff634e",
+// })
+const material = new THREE.MeshBasicMaterial({
+  wireframe: true,
 })
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh)
@@ -21,8 +24,9 @@ const sizes = {
 }
 
 //Light
-const light = new THREE.PointLight(0xffffff, 2, 100)
-light.position.set(10, 10, 10)
+const light = new THREE.PointLight(0xffffff, 5, 100)
+//const light = new THREE.AmbientLight(0xffffff)
+ light.position.set(10, 10, 10)
 scene.add(light)
 
 //Camera
@@ -38,12 +42,12 @@ renderer.setPixelRatio(2)
 renderer.render(scene, camera)
 
 //Controls
-const controls = new OrbitControls(camera, canvas)
+const controls = new OrbitControls(camera, renderer.domElement)
 controls.enableDamping = true
 controls.enablePan = false
 controls.enableZoom = false
 controls.autoRotate = true
-controls.autoRoateSpeed = 5
+controls.autoRoateSpeed = 1
 
 //Resize
 window.addEventListener('resize', () => {
@@ -64,6 +68,32 @@ const loop = () => {
   window.requestAnimationFrame(loop)
 }
 loop()
+
+
+//Create an animation oop
+function animate() {
+  requestAnimationFrame (animate);
+
+
+}
+
+animate()
+
+function addStar() {
+  const geometry = new THREE.SphereGeometry(0.1, 24, 24);
+  const material = new THREE.MeshStandardMaterial({color: 0xffffff})
+  const star = new THREE.Mesh(geometry, material)
+  
+  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
+
+  star.position.set(x, y, z);
+  scene.add(star)
+}
+
+Array(200).fill().forEach(addStar)
+
+const background = new THREE.TextureLoader().load("/background.png")
+scene.background = background
 
 //Timeline
 const t1 = gsap.timeline({ defaults: {duration: 1 }})
@@ -101,5 +131,7 @@ window.addEventListener('mousemove', (e) => {
     })
   }
 })
+
+
 
 
