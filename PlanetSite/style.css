@@ -6,8 +6,37 @@
 
 body,
 html {
+  overflow-wrap: normal;
+  overflow:scroll;
   overflow-x: hidden;
   font-family: 'Unbounded', cursive;
+}
+
+.main{
+  width: 100vw;
+  color: black;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+
+}
+
+main{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 99;
+  left: 50%;
+  top: 50%;
+  width: 100vw;
+  color: black;
+  width: 100;
+  margin: 0px auto;
+  padding: 120px 0px;
+  display: grid;
 }
 
 .webgl{
@@ -18,7 +47,7 @@ html {
 }
 
 nav {
-  color: white;
+  color: black;
   z-index: 2;
   position: relative;
   padding: 4rem 8rem;
@@ -28,7 +57,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
@@ -39,23 +68,12 @@ nav ul {
 }
 
 .title{
-  color: white;
+  color: black;
   z-index: 2;
   position: absolute;
   font-weight:lighter;
   font-size: 3rem;
   left: 50%;
   top: 75%;
-  transform: translate(-50%, -75%)
-}
-
-.about{
-  color: white;
-  z-index: 2;
-  position: absolute;
-  font-weight:bold;
-  font-size: 3rem;
-  left: 20%;
-  top: 100%;
   transform: translate(-50%, -75%)
 }
