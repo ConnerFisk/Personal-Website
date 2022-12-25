@@ -9,19 +9,41 @@
       href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;500;700&display=swap" 
       rel="stylesheet"
     />
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;300;700&display=swap" 
+    rel="stylesheet"
+    />
   </head>
   <body>
+    
     <canvas id="bg"></canvas>
     <nav>
+      <img src="/muted.png" id="icon">
+      <audio id="song" loop>
+        <source src="/music.mp3" type="audio/mp3">
+      </audio>
+      <script>
+        var song = document.getElementById("song")
+        var icon = document.getElementById("icon")
+
+        icon.onclick = function (){
+          if(song.paused){
+            song.play();
+            icon.src="/playing.png"
+          }else{
+            song.pause();
+            icon.src="/muted.png"
+          }
+        }
+      </script>
       <a href="/">CONNERFISK</a>
       <ul>
         <a href="#about">about</a>
         <a href="#projects">projects</a>
-        <a href="#resume">resume</a>
       </ul>
     </nav>
     <header>
-      <h1 class="title">welcome...</h1>
+      <h1 class="title">W E L C O M E</h1>
     </header>
     
     <main class="main">
@@ -30,31 +52,65 @@
         <p>Conner Fisk, Software Engineer</p>
       </blockquote>
 
-      <section id="about" class="textsection">
-        <h2> About me.</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <section id="about" class="text-section">
+        <h2 class="section-title"> About me.</h2>
+        <br>
+        <p class="section-content">
+          Hi, nice to meet you. I'm <b>Conner</b>.
+          <br>
+          I am a undergraduate student in the <b>University of Utah's Honors College</b> majoring in <b>Computer Science</b> with a minor in <b>FinTech</b>.
         </p>
 
       </section>
 
-      <section id="projects" class="textsection">
-        <h2>Projects</h2>
-        <p>LIST PROJECTS</p>
-      </section>
+      <section id="projects" class="text-section">
+        <h2 class="section-title">Projects</h2>
+        <br>
 
-      <section id="resume" class="textsection">
-        <h3>resume</h3>
+        <a href="https://github.com/ConnerFisk/TowerDefenseGame" target="_blank">
+          <h3 class="section-content">Tower Defense Game</h3>
+          <h4 class="section-content"><i>Java | <b>Click to view repository...</b></i></h4>
+        </a>
+        <p class="section-content">Pair programmed a tower defense game in Java styled after the Formula 1 Team Haas. 
+          <br>
+          Worked and problem solved with a partner throughout the process, picking up key skills necessary for collaborative coding.
+        </p>
+
+        <br>
+        <br>
+
+
+        <h3 class="section-content">Spreadsheet Application</h3>
+        <h4 class="section-content"><i>C# & .NET MAUI</i></h4>
+        <p class="section-content">Developed a spreadsheet application using C# and .NET MAUI which takes in various formulas, while keeping track of the necessary relationships between each cell
+          and formula, to calculate the user’s equations.
+        </p>
+
+        <br>
+        <br>
+
+        <h3 class="section-content">Multiplayer Snake Game</h3>
+        <h4 class="section-content"><i>C# & .NET MAUI</i></h4>
+        <p class="section-content">Developed a snake-style multiplayer game using C# and .NET MAUI that allows
+          multiple users to compete against each other on the same server, focusing on network fundamentals and MVC design.
+        </p>
+
+        <br>
+        <br>
+
+        <a href="https://github.com/ConnerFisk/Personal-Website" target="_blank">
+          <h3 class="section-content">Personal Website</h3>
+          <h4 class="section-content"><i>JavaScript, HTML, CSS | <b>Click to view repository...</b></i></h4>
+        </a>
+        <p class="section-content">Created the website you are currently on using HTML, CSS, JavaScript, and libraries such as Three.js to create an interactive 3D space theme.
+        </p>
+
       </section>
     </main>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/main.js">
+      window.addEventListener('click', () => {
+        document.getElementById("song").play();
+      });
+    </script>
   </body>
 </html>
