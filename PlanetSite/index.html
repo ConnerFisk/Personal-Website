@@ -18,28 +18,31 @@
     
     <canvas id="bg"></canvas>
     <nav>
-      <img src="/muted.png" id="icon">
-      <audio id="song" loop>
-        <source src="/music.mp3" type="audio/mp3">
-      </audio>
-      <script>
-        var song = document.getElementById("song")
-        var icon = document.getElementById("icon")
-
-        icon.onclick = function (){
-          if(song.paused){
-            song.play();
-            icon.src="/playing.png"
-          }else{
-            song.pause();
-            icon.src="/muted.png"
+      <div>
+        <img src="/muted.png" id="icon">
+        <audio id="song" loop>
+          <source src="/music.mp3" type="audio/mp3">
+        </audio>
+        <script>
+          var song = document.getElementById("song")
+          var icon = document.getElementById("icon")
+  
+          icon.onclick = function (){
+            if(song.paused){
+              song.play();
+              icon.src="/playing.png"
+            }else{
+              song.pause();
+              icon.src="/muted.png"
+            }
           }
-        }
-      </script>
-      <a href="/">CONNERFISK</a>
+        </script>
+        <a href="/">CONNERFISK</a>
+      </div>
       <ul>
         <a href="#about">about</a>
         <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
       </ul>
     </nav>
     <header>
@@ -49,16 +52,19 @@
     <main class="main">
 
       <blockquote>
-        <p>Conner Fisk, Software Engineer</p>
+        <p>Conner Fisk | Software Engineer >>> Computer Science Student</p>
       </blockquote>
 
       <section id="about" class="text-section">
         <h2 class="section-title"> About me.</h2>
         <br>
         <p class="section-content">
-          Hi, nice to meet you. I'm <b>Conner</b>.
+          Hi, I'm <b>Conner</b>. Nice to meet you.
           <br>
-          I am a undergraduate student in the <b>University of Utah's Honors College</b> majoring in <b>Computer Science</b> with a minor in <b>FinTech</b>.
+          <br>
+          I am an undergraduate student in the <b>University of Utah's Honors College</b> majoring in <b>Computer Science</b> with a minor in <b>FinTech</b>.
+          I'm a <b>sophomore</b> on track to graduate in the <b>Spring of 2025</b> currently looking for <b>internships</b> to further my knowledge and get hands-on experience.
+          For more information, take a look at my <b><a href="https://drive.google.com/file/d/1Q9SpgTP59XjoxBpKL3uWkmtdrUL6PYJ-/view?usp=sharing" target="_blank">resume</a></b>.
         </p>
 
       </section>
@@ -105,6 +111,19 @@
         <p class="section-content">Created the website you are currently on using HTML, CSS, JavaScript, and libraries such as Three.js to create an interactive 3D space theme.
         </p>
 
+      </section>
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <br>
+        <a href="mailto:fiskconner@gmail.com">
+          <h3 class="section-content">Email Me</h3>
+          <h4 class="section-content"><i>fiskconner@gmail.com</i></h4>
+        </a>
+        <br>
+        <a href="https://www.linkedin.com/in/connerfisk/" target="_blank">
+          <h3 class="section-content">LinkedIn</h3>
+          <h4 class="section-content"><i>Visit my page...</i></h4>
+        </a>
       </section>
     </main>
     <script type="module" src="/main.js">
