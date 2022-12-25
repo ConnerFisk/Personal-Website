@@ -32,6 +32,7 @@ a:link {
   text-decoration: none;
 }
 
+
 /* visited link */
 a:visited {
   color: black;
@@ -107,8 +108,8 @@ nav {
   font-size: 16px;
   z-index: 2;
   position: relative;
-  padding: 2rem 1rem;
-  display: flex;
+  padding: 2rem .5rem;
+  display:flex;
   justify-content:space-around;
 }
 
@@ -120,8 +121,8 @@ nav a {
 
 nav ul {
   list-style: none;
-  display: flex;
-  gap: .8rem;
+  display: grid;
+  gap: 0;
 }
 
 .title{
