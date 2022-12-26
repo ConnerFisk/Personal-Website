@@ -1,15 +1,26 @@
+/**
+* This class contains the css styling for the website
+*
+* @author - Conner Fisk
+* @since - Dec 23, 2022
+*/
+
+/* Set the defaults wanted for everything */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Fix the canvas */
 canvas{
   position: fixed;
   top: 0;
   left: 0;
 }
 
+/* Set the overflow values and set the font for
+  the body and html */
 body,
 html {
   overflow-wrap: normal;
@@ -18,91 +29,59 @@ html {
   font-family: 'Unbounded', cursive;
 }
 
+/* Add the desired margins to the blockquote */
 blockquote{
   margin:75px 75px 100px
 }
 
+/* Add the desired margins to the sections */
 section{
   margin: 0px 100px 100px
 }
 
-/* unvisited link */
+/**
+* Style the hyperlinks to there are no
+* unwanted colors or underlines.
+*/
+/* Unvisited link */
 a:link {
   color: black;
   text-decoration: none;
 }
-
-
-/* visited link */
+.hyperlink:link{
+  text-align: left;
+}
+/* Visited link */
 a:visited {
   color: black;
   text-decoration: none;
 }
-
-/* mouse over link */
+.hyperlink:visited{
+  text-align: left;
+}
+/* Mouse over link */
 a:hover {
   color: black;
   text-decoration: none;
 }
-
-/* selected link */
+.hyperlink:hover{
+  text-align: left;
+}
+/* Selected link */
 a:active {
   color: black;
   text-decoration: none;
 }
-
-.hyperlink:link{
-  text-align: left;
-}
-
-.hyperlink:visited{
-  text-align: left;
-}
-
-.hyperlink:hover{
-  text-align: left;
-}
-
 .hyperlink:active{
   text-align: left;
 }
-
-.main{
-  color: black;
-  z-index: 99;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  margin: 0px auto;
-  top: 70%;
-  padding: 120px 0px;
-  
-  display: grid;
-
-}
-
-.section-title{
-  text-align:right;
-  margin: 0px 0px 0px
-}
-
+/* Header */
 .header-hyperlink{
   text-align:right;
 }
 
-.section-content{
-  font-family: 'Chivo Mono', monospace;
-  text-align:left;
-  margin: 0px 0px 0px
-}
-
-.webgl{
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
+/* Set the sizes and styles to the nav bar at
+  the top of the site */
 nav {
   color: black;
   font-size: 16px;
@@ -113,18 +92,61 @@ nav {
   justify-content:space-around;
 }
 
+/* Get a bold font */
 nav a {
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
 
+/* Get a grid view of the items */
 nav ul {
   list-style: none;
   display: grid;
   gap: 0;
 }
 
+/* Set the general styling for the main */
+.main{
+  color: black;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin: 0px auto;
+  top: 70%;
+  padding: 120px 0px;
+  display: grid;
+}
+
+/* Align the section titles to the right */
+.section-title{
+  text-align:right;
+  margin: 0px 0px 0px
+}
+
+/* Change the font and align the section content
+  to the left */
+.section-content{
+  font-family: 'Chivo Mono', monospace;
+  text-align:left;
+  margin: 0px 0px 0px
+}
+
+/* Set the position and position for .webgl */
+.webgl{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Make the credits font smaller */
+.credits{
+  font-size: 12px;
+}
+
+/* Style the title */
 .title{
   color: black;
   z-index: 2;
@@ -136,6 +158,7 @@ nav ul {
   transform: translate(-50%, -75%)
 }
 
+/* Set the icon's size and alignment */
 #icon{
   width: 24px;
   height: 24px;

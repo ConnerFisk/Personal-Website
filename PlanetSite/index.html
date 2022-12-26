@@ -1,3 +1,10 @@
+<!--
+  This file holds all of the html code for the website.
+
+  @author - Conner Fisk
+  @since - Dec 23, 2022
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +22,6 @@
     />
   </head>
   <body>
-    
     <canvas id="bg"></canvas>
     <nav>
       <div>
@@ -26,7 +32,9 @@
         <script>
           var song = document.getElementById("song")
           var icon = document.getElementById("icon")
-  
+          
+          //This function will change the music icon and
+          //play or pause the music when clicked.
           icon.onclick = function (){
             if(song.paused){
               song.play();
@@ -66,13 +74,11 @@
           I'm a <b>sophomore</b> on track to graduate in the <b>Spring of 2025</b> currently looking for <b>internships</b> to further my knowledge and get hands-on experience.
           For more information, take a look at my <b><a href="https://drive.google.com/file/d/1Q9SpgTP59XjoxBpKL3uWkmtdrUL6PYJ-/view?usp=sharing" target="_blank">resume</a></b>.
         </p>
-
       </section>
 
       <section id="projects" class="text-section">
         <h2 class="section-title">Projects</h2>
         <br>
-
         <a href="https://github.com/ConnerFisk/TowerDefenseGame" target="_blank">
           <h3 class="section-content">Tower Defense Game</h3>
           <h4 class="section-content"><i>Java | <b>Click to view repository...</b></i></h4>
@@ -81,37 +87,30 @@
           <br>
           Worked and problem solved with a partner throughout the process, picking up key skills necessary for collaborative coding.
         </p>
-
         <br>
         <br>
-
-
         <h3 class="section-content">Spreadsheet Application</h3>
         <h4 class="section-content"><i>C# & .NET MAUI</i></h4>
         <p class="section-content">Developed a spreadsheet application using C# and .NET MAUI which takes in various formulas, while keeping track of the necessary relationships between each cell
           and formula, to calculate the user’s equations.
         </p>
-
         <br>
         <br>
-
         <h3 class="section-content">Multiplayer Snake Game</h3>
         <h4 class="section-content"><i>C# & .NET MAUI</i></h4>
         <p class="section-content">Developed a snake-style multiplayer game using C# and .NET MAUI that allows
           multiple users to compete against each other on the same server, focusing on network fundamentals and MVC design.
         </p>
-
         <br>
         <br>
-
         <a href="https://github.com/ConnerFisk/Personal-Website" target="_blank">
           <h3 class="section-content">Personal Website</h3>
           <h4 class="section-content"><i>JavaScript, HTML, CSS | <b>Click to view repository...</b></i></h4>
         </a>
         <p class="section-content">Created the website you are currently on using HTML, CSS, JavaScript, and libraries such as Three.js to create an interactive 3D space theme.
         </p>
-
       </section>
+
       <section id="contact">
         <h2 class="section-title">Contact</h2>
         <br>
@@ -130,6 +129,11 @@
           <h4 class="section-content"><i>Visit my GitHub...</i></h4>
         </a>
       </section>
+      
+      <br>
+      <p class="credits">
+        <i>music: yunè pinku – Bluff</i>
+      </p>
     </main>
     <script type="module" src="/main.js">
       window.addEventListener('click', () => {
