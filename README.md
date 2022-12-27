@@ -6,9 +6,9 @@ My personal portfilio [website](https://connerfisk.com/) using JavaScript, HTML,
 ><details>
 ><summary>Source Code</summary>
 >  
->  - [main.js](planetsite/main.js)
->  - [index.html](planetsite/index.html)
->  - [style.css](planetsite/style.css)
+>  - [main.js](PlanetSite/main.js)
+>  - [index.html](PlanetSite/index.html)
+>  - [style.css](PlanetSite/style.css)
 >
->  [View All Code](planetsite) 
+>  [View All Code](PlanetSite) 
 ></details>
