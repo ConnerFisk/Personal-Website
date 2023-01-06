@@ -57,7 +57,7 @@ controls.enableDamping = true
 controls.enablePan = false
 controls.enableZoom = false
 controls.autoRotate = true
-controls.autoRoateSpeed = 1
+controls.autoRotateSpeed = 0.75
 
 /**
  * Resize all that is needed when the user resizes
