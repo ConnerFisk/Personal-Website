@@ -16,7 +16,7 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
 const scene = new THREE.Scene()
 
 //Create our planet.
-const geometry = new THREE.IcosahedronGeometry(3, 1)
+const geometry = new THREE.IcosahedronBufferGeometry(3, 1)
 const material = new THREE.MeshBasicMaterial({
   wireframe: true,
   color: '#fff',
@@ -98,7 +98,7 @@ animate()
  */
 function addStar() {
   //Create the star mesh.
-  const geometry = new THREE.SphereGeometry(0.1, 24, 24);
+  const geometry = new THREE.SphereBufferGeometry(0.1, 24, 24);
   const material = new THREE.MeshStandardMaterial({color: 0x000})
   const star = new THREE.Mesh(geometry, material)
   
