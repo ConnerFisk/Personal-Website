@@ -1,6 +1,6 @@
 # My Personal Website
 ###### About
-My personal portfilio [website](https://connerfisk.com/) using JavaScript, HTML, CSS, & libraries such as Three.js to to create an interactive 3D space theme.
+My old personal portfilio website using JavaScript, HTML, CSS, & libraries such as Three.js to to create an interactive 3D space theme.
 
 >## Code
 ><details>
